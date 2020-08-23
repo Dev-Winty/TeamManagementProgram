@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,19 @@ namespace TeamManagementProgram
 
         private void btnRmInList_Click(object sender, RoutedEventArgs e)
         {
+            if (lsMember.SelectedItem != null)
+            {
 
+                foreach (User item in lsMember.SelectedItems)
+                {
+                    users.Remove(item);
+                }
+                lsMember.ItemsSource = users;          
+                lsMember.Items.Refresh();
+            } else
+            {
+                MessageBox.Show("리스트에서 삭제 할 팀원을 " + Environment.NewLine + "선택 후 다시 클릭해 주세요!", TITLE_NAME);
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
