@@ -24,5 +24,20 @@ namespace TeamManagementProgram
         {
             InitializeComponent();
         }
+
+        private void btnRmInList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnRm_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
