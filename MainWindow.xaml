@@ -27,6 +27,13 @@
                 <TextBox MaxLength="10" Width="165" Margin="10, 0, 0, 0"/>
             </WrapPanel>
             <Button Margin="34, 10" Width="70" Height="30" HorizontalAlignment="Right" FontSize="12">등록</Button>
+            
+            <Label FontSize="16" FontWeight="Bold">팀원 삭제</Label>
+            <WrapPanel Margin="10, 0, 0, 0">
+                <TextBlock>이름</TextBlock>
+                <TextBox MaxLength="3" Width="165" Margin=" 10, 0, 0, 0"/>
+            </WrapPanel>
+            <Button Margin="34, 10" Width="70" Height="30" HorizontalAlignment="Right" FontSize="12">삭제</Button>
         </StackPanel>
     </Grid>
 </Window>
