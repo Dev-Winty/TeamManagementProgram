@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamManagementProgram"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="750">
+        Title="MainWindow" Height="450" Width="750" ResizeMode="NoResize">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -16,6 +16,17 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        
+        <StackPanel>
+            <Label FontSize="16" FontWeight="Bold">팀원 등록</Label>
+            <WrapPanel Margin="10, 0, 0, 0">
+                <TextBlock>이름</TextBlock>
+                <TextBox MaxLength="3" Width="165" Margin=" 10, 0, 0, 0"/>
+            </WrapPanel>
+            <WrapPanel Margin="10, 10, 0, 0">
+                <TextBlock>부서</TextBlock>
+                <TextBox MaxLength="10" Width="165" Margin="10, 0, 0, 0"/>
+            </WrapPanel>
+            <Button Margin="34, 10" Width="70" Height="30" HorizontalAlignment="Right" FontSize="12">등록</Button>
+        </StackPanel>
     </Grid>
 </Window>
