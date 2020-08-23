@@ -53,7 +53,20 @@ namespace TeamManagementProgram
         {
             if (!(tbAddName.Text.Equals("") || tbAddTeam.Text.Equals("")))
             {
-
+                foreach (User user in lsMember.Items)
+                {
+                    if (user.Name.Equals(tbAddName.Text))
+                    {
+                        MessageBox.Show("같은 이름의 팀원이 이미 존재합니다!", TITLE_NAME);
+                        tbAddName.Text = "";
+                        tbAddTeam.Text = "";
+                        return;
+                    }
+                }
+                users.Add(new User() { Team = tbAddTeam.Text, Name = tbAddName.Text });
+                lsMember.ItemsSource = users;
+                lsMember.Items.Refresh();
+                
             } else
             {
                 MessageBox.Show("입력 값을 입력하세요!", TITLE_NAME);
@@ -81,6 +94,16 @@ namespace TeamManagementProgram
             public override string ToString()
             {
                 return this.Team + " " + this.Name; 
+            }
+        }
+
+        public class UserForCb
+        {
+            public string Name { get; set; }
+
+            public override string ToString()
+            {
+                return this.Name;
             }
         }
     }
