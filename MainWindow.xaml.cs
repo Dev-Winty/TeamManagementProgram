@@ -77,7 +77,18 @@ namespace TeamManagementProgram
         {
             if (!(tbRmName.Text.Equals("")))
             {
-
+                foreach (User user in lsMember.Items)
+                {
+                    if (user.Name.Equals(tbRmName.Text))
+                    {
+                        users.Remove(user);
+                        tbRmName.Text = "";
+                        lsMember.ItemsSource = users;
+                        lsMember.Items.Refresh();
+                        return;
+                    }
+                }
+                MessageBox.Show("그런 이름을 가진 팀원이" + Environment.NewLine + "존재하지 않습니다!", TITLE_NAME);
             }
             else
             {
