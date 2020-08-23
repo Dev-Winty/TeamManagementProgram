@@ -31,7 +31,18 @@
             <Label FontSize="16" FontWeight="Bold">팀원 삭제</Label>
             <WrapPanel Margin="10, 0, 0, 0">
                 <TextBlock>이름</TextBlock>
-                <TextBox Name="tbRmName" MaxLength="3" Width="165" Margin=" 10, 0, 0, 0"/>
+                <ComboBox Name="cbRmName" Width="165" Margin=" 10, 0, 0, 0" IsEditable="False">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>[</TextBlock>
+                                <TextBlock Text="{Binding Team}" Tag="{Binding Name}"/>
+                                <TextBlock>]</TextBlock>
+                                <TextBlock Text="{Binding Name}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </WrapPanel>
             <Button Name="btnRm" Click="btnRm_Click" Margin="34, 10" Width="70" Height="30" HorizontalAlignment="Right" FontSize="12">삭제</Button>
         </StackPanel>

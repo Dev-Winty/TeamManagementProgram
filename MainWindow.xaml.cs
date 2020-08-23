@@ -23,12 +23,15 @@ namespace TeamManagementProgram
     {
         public const string TITLE_NAME = "팀원 관리 프로그램";
         List<User> users = new List<User>();
+       // List<User> cbUsers = new List<User>();
         public MainWindow()
         {
             InitializeComponent();
 
             users.Add(new User() { Team = "윈도우", Name = "임경준" });
+            //cbUsers.Add(new User() { Team = "윈도우", Name = "임경준" });
             lsMember.ItemsSource = users;
+            cbRmName.ItemsSource = users;
             
         }
 
@@ -41,8 +44,9 @@ namespace TeamManagementProgram
                 {
                     users.Remove(item);
                 }
-                lsMember.ItemsSource = users;          
+                lsMember.ItemsSource = users;
                 lsMember.Items.Refresh();
+                cbRmName.SelectedItem = null;
             } else
             {
                 MessageBox.Show("리스트에서 삭제 할 팀원을 " + Environment.NewLine + "선택 후 다시 클릭해 주세요!", TITLE_NAME);
@@ -64,9 +68,13 @@ namespace TeamManagementProgram
                     }
                 }
                 users.Add(new User() { Team = tbAddTeam.Text, Name = tbAddName.Text });
-                lsMember.ItemsSource = users;
+                lsMember.ItemsSource = users;             
                 lsMember.Items.Refresh();
-                
+                cbRmName.ItemsSource = users;
+                cbRmName.Items.Refresh();
+                tbAddName.Text = "";
+                tbAddTeam.Text = "";
+
             } else
             {
                 MessageBox.Show("입력 값을 입력하세요!", TITLE_NAME);
@@ -75,24 +83,17 @@ namespace TeamManagementProgram
 
         private void btnRm_Click(object sender, RoutedEventArgs e)
         {
-            if (!(tbRmName.Text.Equals("")))
+            if (cbRmName.SelectedItem != null)
             {
-                foreach (User user in lsMember.Items)
-                {
-                    if (user.Name.Equals(tbRmName.Text))
-                    {
-                        users.Remove(user);
-                        tbRmName.Text = "";
-                        lsMember.ItemsSource = users;
-                        lsMember.Items.Refresh();
-                        return;
-                    }
-                }
-                MessageBox.Show("그런 이름을 가진 팀원이" + Environment.NewLine + "존재하지 않습니다!", TITLE_NAME);
+                users.Remove(cbRmName.SelectedItem as User);
+                cbRmName.ItemsSource = users;
+                cbRmName.Items.Refresh();
+                lsMember.ItemsSource = users;
+                lsMember.Items.Refresh();
             }
             else
             {
-                MessageBox.Show("입력 값을 입력하세요!", TITLE_NAME);
+                MessageBox.Show("리스트에서 삭제 할 팀원을 " + Environment.NewLine + "선택 후 다시 클릭해 주세요!", TITLE_NAME);
             }
         }
 
