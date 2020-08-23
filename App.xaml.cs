@@ -13,5 +13,11 @@ namespace TeamManagementProgram
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Title = "팀원 관리 프로그램";
+            window.Show();
+        }
     }
 }

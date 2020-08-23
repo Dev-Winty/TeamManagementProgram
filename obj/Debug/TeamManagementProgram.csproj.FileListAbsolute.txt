@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\TeamManagementProgram\bin\Debug\TeamManagementProgram.exe.config
+C:\Users\USER\source\repos\TeamManagementProgram\bin\Debug\TeamManagementProgram.exe
+C:\Users\USER\source\repos\TeamManagementProgram\bin\Debug\TeamManagementProgram.pdb
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\MainWindow.g.cs
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\App.g.cs
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram_MarkupCompile.cache
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram_MarkupCompile.lref
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\MainWindow.baml
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.g.resources
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.Properties.Resources.resources
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.exe
+C:\Users\USER\source\repos\TeamManagementProgram\obj\Debug\TeamManagementProgram.pdb
