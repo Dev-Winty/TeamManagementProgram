@@ -46,6 +46,8 @@
             </WrapPanel>
             <Button Name="btnRm" Click="btnRm_Click" Margin="34, 10" Width="70" Height="30" HorizontalAlignment="Right" FontSize="12">삭제</Button>
         </StackPanel>
+        <TextBlock Name="tbLog" Grid.Row="1">앙: </TextBlock>
+        <Button Name="btnConnectTest" Click="btnConnectTest_Click" Grid.Column="1" Margin="50, 100">연결 테스트</Button>
         <ListView Name="lsMember" Grid.Column="2" Foreground="Black">
             <ListView.View>
                 <GridView>
